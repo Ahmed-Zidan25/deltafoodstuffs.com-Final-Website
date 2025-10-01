@@ -4,6 +4,8 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { Users, Globe, CheckCircle, Target, Eye, Heart } from "lucide-react"
 import SocialMedia from "@/components/social-media"
+import React from "react";
+import { Rocket } from "lucide-react";
 
 export default function AboutPage() {
   const values = [
