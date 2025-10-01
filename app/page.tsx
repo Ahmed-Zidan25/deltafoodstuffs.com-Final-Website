@@ -116,6 +116,7 @@ Our products are carefully selected, handled, and packed to meet international e
         </svg>
       </div>
     </div>
+    </div>
       <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-lg p-3 text-white">
                   <p className="text-sm font-medium">From Farm to Export</p>
                   <p className="text-xs opacity-90">Watch our premium Egyptian produce journey</p>
