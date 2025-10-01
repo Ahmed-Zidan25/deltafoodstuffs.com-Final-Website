@@ -38,11 +38,12 @@ const Navigation = () => {
 <Link href="/" className="flex items-center">
   <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16">
     <Image
-      src="/Logo-2.jpg"
+      src="/logo-2.png"
       alt="Delta Food Stuffs Logo"
       fill
       className="object-contain rounded-lg"
-      sizes="(max-width: 640px) 48px, (max-width: 768px) 56px, 64px"
+      /* sizes="(max-width: 640px) 48px, (max-width: 768px) 56px, 64px" */
+      sizes="90px"
       priority
     />
   </div>

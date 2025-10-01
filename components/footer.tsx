@@ -11,18 +11,17 @@ const Footer = () => {
   <div className="flex items-center space-x-4">
     <div className="relative w-16 h-16 md:w-20 md:h-20">
       <Image
-        src="/Logo-2.jpg"
+        src="/logo-2.png"
         alt="Delta Food Stuffs Logo"
         fill
         className="object-contain rounded-lg"
-        sizes="80px"
+        sizes="90px"
         priority
       />
     </div>
     <div>
       <p className="text-lg font-semibold">Delta Food Stuffs</p>
-      <p className="text-sm text-muted-foreground">Reliable supply of premium frozen produce</p>
-    </div>
+      </div>
   </div>
 
   <p className="text-muted-foreground text-sm leading-relaxed max-w-xl">
@@ -116,7 +115,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 Delta Food Stuffs. All rights reserved. | Premium Egyptian Produce Worldwide
+            ©2024 Delta Food Stuffs | All rights reserved | Premium Egyptian Produce Worldwide
           </p>
         </div>
       </div>

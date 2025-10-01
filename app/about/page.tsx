@@ -11,13 +11,13 @@ export default function AboutPage() {
       icon: <CheckCircle className="h-6 w-6" />,
       title: "Quality Excellence",
       description:
-        "Uncompromising commitment to delivering the highest quality produce that meets international standards.",
+        "Our real strength lies in trust and reliability. We work only with suppliers who meet our quality standards and share our commitment to excellence. Our goal is to build long-term partnerships with our clients based on transparency, consistency, and results they can count on.",
     },
     {
       icon: <Globe className="h-6 w-6" />,
       title: "Global Reach",
       description:
-        "Building lasting partnerships with buyers across continents, bringing Egyptian agriculture to the world.",
+        "We operate through a strong network of trusted local suppliers who provide us with top-quality products at competitive prices. We carefully manage every step of the supply chain — from selecting the products, to packaging and logistics — ensuring that every shipment arrives on time and in excellent condition.",
     },
     {
       icon: <Heart className="h-6 w-6" />,
@@ -93,11 +93,6 @@ export default function AboutPage() {
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground text-balance">
             Connecting Egypt's Finest to the World
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty text-justify">We are a company specialized in exporting fresh and frozen fruits and vegetables to global markets.</p>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty text-justify">We operate through a strong network of trusted local suppliers who provide us with top-quality products at competitive prices.</p>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty text-justify">We carefully manage every step of the supply chain — from selecting the products, to packaging and logistics — ensuring that every shipment arrives on time and in excellent condition.</p>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty text-justify">Our real strength lies in trust and reliability. We work only with suppliers who meet our quality standards and share our commitment to excellence.</p>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty text-justify">Our goal is to build long-term partnerships with our clients based on transparency, consistency, and results they can count on.</p>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty text-justify">
           For over 15 years, we've been dedicated to bringing the exceptional quality of Egyptian agriculture to international markets, building lasting partnerships based on trust and excellence.
           </p>
