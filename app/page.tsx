@@ -65,7 +65,7 @@ export default function HomePage() {
                   Fresh From Egypt to the World
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
-                  Delta Foodstuffs stands at the forefront of agricultural innovation, transforming nature's bounty into perfectly preserved frozen produce for global markets. Our commitment to quality begins in the heart of the rich Egyptian Delta, where ideal conditions yield exceptional fruits and vegetables. Utilizing advanced freezing technologies, we lock in freshness, taste, and vital nutrients, ensuring our products meet the exacting demands of our B2B clients. Choose Delta Foodstuffs for reliable supply, superior quality, and a partner dedicated to your success.
+                  Delta Food stuffs stands at the forefront of agricultural innovation, transforming nature's bounty into perfectly preserved frozen produce for global markets. Our commitment to quality begins in the heart of the rich Egyptian Delta, where ideal conditions yield exceptional fruits and vegetables. Utilizing advanced freezing technologies, we lock in freshness, taste, and vital nutrients, ensuring our products meet the exacting demands of our B2B clients. Choose Delta Foodstuffs for reliable supply, superior quality, and a partner dedicated to your success.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -93,14 +93,16 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted">
-                <img
-                  src="/egyptian-farm-fresh-vegetables-fruits.jpg"
-                  alt="Fresh Egyptian produce ready for export"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="relative rounded-2xl overflow-hidden bg-muted w-48 h-48">
+  <Image
+    src="/egyptian-farm-fresh-vegetables-fruits.jpg"
+    alt="Fresh Egyptian produce ready for export"
+    fill
+    className="object-cover object-center"
+    sizes="(max-width: 640px) 192px, 384px"
+    priority
+  />
+</div>
 
             {/* <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative group">
