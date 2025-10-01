@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Globe, Truck, Shield, Star, Play } from "lucide-react"
 import SocialMedia from "@/components/social-media"
+import Image from "next/image";
 
 export default function HomePage() {
   const products = [
@@ -93,8 +94,8 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="relative rounded-2xl overflow-hidden bg-muted w-48 h-48">
-  <Image
+           <div className="relative rounded-2xl overflow-hidden bg-muted w-48 h-48">
+  <img
     src="/egyptian-farm-fresh-vegetables-fruits.jpg"
     alt="Fresh Egyptian produce ready for export"
     fill
@@ -103,38 +104,6 @@ export default function HomePage() {
     priority
   />
 </div>
-
-            {/* <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative group">
-                <video
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  poster="/egyptian-farm-fresh-vegetables-fruits-export-quali.jpg">
-                  <source src="/egyptian-produce-cultivation-to-export.mp4" type="video/mp4" />
-                  <source src="/egyptian-produce-cultivation-to-export.webm" type="video/webm" />
-                  {/* Fallback image if video doesn't load 
-                  <img
-                    src="/egyptian-farm-fresh-vegetables-fruits.jpg"
-                    alt="Fresh Egyptian produce ready for export"
-                    className="w-full h-full object-cover"
-                  />
-                </video>
-                {/* Video overlay with play indicator 
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="bg-primary/90 rounded-full p-3">
-                    <Play className="h-6 w-6 text-primary-foreground fill-current" />
-                  </div>
-                </div>
-                {/* Video description overlay 
-                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-lg p-3 text-white">
-                  <p className="text-sm font-medium">From Farm to Export</p>
-                  <p className="text-xs opacity-90">Watch our premium Egyptian produce journey</p>
-                </div>
-              </div>
-               */}
               <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-8 w-8 text-primary" />
@@ -148,6 +117,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
 
       {/* Products Section */}
       <section className="py-20 bg-background">
