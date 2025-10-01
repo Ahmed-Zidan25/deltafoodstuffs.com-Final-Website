@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowRight, Leaf, Apple, Snowflake } from "lucide-react"
 
-export default function ProductsPage() {
+export default function picklePage() {
   const categories = [
     {
       title: "Fresh Products",

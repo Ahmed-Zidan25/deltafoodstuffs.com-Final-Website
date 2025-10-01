@@ -4,24 +4,25 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Globe, Truck, Shield, Star, Play } from "lucide-react"
 import SocialMedia from "@/components/social-media"
+import Image from "next/image";
 
 export default function HomePage() {
   const products = [
     {
-      title: "Fresh Vegetables",
-      description: "Premium carrots, onions, garlic and more",
+      title: "Fresh Products",
+      description: "Premium Citrus, onions, garlic, Mangoes and more",
       image: "/fresh-vegetables-carrots-onions-garlic.jpg",
-      href: "/products/vegetables",
+      href: "/products/fresh",
     },
     {
-      title: "Tropical Fruits",
-      description: "Mangoes, guavas, pomegranates from Egypt",
+      title: "Premium Pickle",
+      description: "A Timeless Tradition, Reimagined for Modern Palates ... year-round",
       image: "/tropical-fruits-mango-guava-pomegranate.jpg",
-      href: "/products/fruits",
+      href: "/products/pickle",
     },
     {
-      title: "Citrus Collection",
-      description: "Oranges, mandarines, lemons year-round",
+      title: "Frozen Produce",
+      description: "Peas, Strawberries, Mango, Cauliflower ... year-round",
       image: "/citrus-fruits-oranges-lemons-mandarines.jpg",
       href: "/products/frozen",
     },
@@ -65,8 +66,9 @@ export default function HomePage() {
                   Fresh From Egypt to the World
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
-                  Leading exporter of premium vegetables, fruits, and citrus. Delivering Egyptian agricultural
-                  excellence to international markets with uncompromising quality and reliability.
+                  We offer a wide range of premium-quality fresh fruits and vegetables sourced directly from trusted local farms.
+Our products are carefully selected, handled, and packed to meet international export standards — ensuring freshness, taste, and shelf life
+. Delivering Egyptian agricultural excellence to international markets with uncompromising quality and reliability.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -95,36 +97,32 @@ export default function HomePage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative group">
-                <video
-                  className="w-full h-full object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  poster="/egyptian-farm-fresh-vegetables-fruits-export-quali.jpg"
-                >
-                  <source src="/egyptian-produce-cultivation-to-export.mp4" type="video/mp4" />
-                  <source src="/egyptian-produce-cultivation-to-export.webm" type="video/webm" />
-                  {/* Fallback image if video doesn't load */}
-                  <img
-                    src="/egyptian-farm-fresh-vegetables-fruits-export-quali.jpg"
-                    alt="Fresh Egyptian produce ready for export"
-                    className="w-full h-full object-cover"
-                  />
-                </video>
-                {/* Video overlay with play indicator */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <div className="bg-primary/90 rounded-full p-3">
-                    <Play className="h-6 w-6 text-primary-foreground fill-current" />
-                  </div>
-                </div>
-                {/* Video description overlay */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-lg p-3 text-white">
-                  <p className="text-sm font-medium">From Farm to Export</p>
-                  <p className="text-xs opacity-90">Watch our premium Egyptian produce journey</p>
-                </div>
-              </div>
+  <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative group">
+    <div className="relative w-full h-full">
+      <Image
+        src="/egyptian-farm-fresh-vegetables-fruits.jpg"
+        alt="Fresh Egyptian produce ready for export"
+        fill
+        className="object-cover"
+        sizes="(max-width: 640px) 100vw, 50vw"
+        priority
+      />
+    </div>
+
+    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      <div className="bg-primary/90 rounded-full p-3">
+        <svg className="h-6 w-6 text-primary-foreground" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 6a4 4 0 110 8 4 4 0 010-8z" />
+        </svg>
+      </div>
+    </div>
+
+    <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-lg p-3 text-white">
+      <p className="text-sm font-medium">From Farm to Export</p>
+      <p className="text-xs opacity-90">Our premium Egyptian produce journey</p>
+    </div>
+  </div>
+</div>
               <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-8 w-8 text-primary" />

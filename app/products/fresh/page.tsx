@@ -5,12 +5,12 @@ import Link from "next/link"
 import { ArrowLeft, CheckCircle, Truck, Calendar } from "lucide-react"
 import SocialShare from "@/components/social-share"
 
-export default function VegetablesPage() {
+export default function freshPage() {
   const vegetables = [
     {
-      name: "Premium Carrots",
-      description: "Sweet, crunchy carrots perfect for fresh consumption and processing",
-      image: "/premium-carrots-fresh-egyptian.jpg",
+      name: "Citrus Fruits",
+      description: "Sweet, seedless, and rich in juice. Available during the winter season",
+      image: "/citrus-fruits-oranges-lemons-mandarines.jpg",
       season: "Year-round",
       packaging: "10kg, 20kg cartons",
       specifications: ["Grade A quality", "Size: 15-25cm", "Brix: 8-10%", "Shelf life: 3-4 weeks"],

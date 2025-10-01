@@ -43,12 +43,11 @@ const Navigation = () => {
       fill
       className="object-contain rounded-lg"
       /* sizes="(max-width: 640px) 48px, (max-width: 768px) 56px, 64px" */
-      sizes="105px"
+      sizes="110px"
       priority
     />
   </div>
-  <span className="ml-3 text-lg font-semibold hidden sm:inline">Delta Food Stuffs</span>
-</Link>
+  </Link>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (

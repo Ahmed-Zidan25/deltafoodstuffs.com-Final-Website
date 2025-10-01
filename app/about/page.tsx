@@ -155,6 +155,20 @@ export default function AboutPage() {
               </CardDescription>
             </CardContent>
           </Card>
+
+          <Card className="text-center border-border">
+            <CardHeader>
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+               <Rocket className="h-6 w-6 text-primary-foreground" />
+              </div>
+              <CardTitle className="text-card-foreground">Our Goals</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription className="leading-relaxed">
+                Our goal is to build long-term partnerships with our clients based on transparency, consistency, and results they can count on.
+              </CardDescription>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Core Values */}

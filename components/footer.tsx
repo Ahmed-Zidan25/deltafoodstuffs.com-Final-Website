@@ -15,13 +15,10 @@ const Footer = () => {
         alt="Delta Food Stuffs Logo"
         fill
         className="object-contain rounded-lg"
-        sizes="90px"
+        sizes="105px"
         priority
       />
     </div>
-    <div>
-      <p className="text-lg font-semibold">Delta Food Stuffs</p>
-      </div>
   </div>
 
   <p className="text-muted-foreground text-sm leading-relaxed max-w-xl">
