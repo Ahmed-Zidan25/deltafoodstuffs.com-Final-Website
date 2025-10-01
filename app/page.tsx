@@ -116,13 +116,11 @@ Our products are carefully selected, handled, and packed to meet international e
         </svg>
       </div>
     </div>
-
-    <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-lg p-3 text-white">
-      <p className="text-sm font-medium">From Farm to Export</p>
-      <p className="text-xs opacity-90">Our premium Egyptian produce journey</p>
-    </div>
-  </div>
-</div>
+      <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-lg p-3 text-white">
+                  <p className="text-sm font-medium">From Farm to Export</p>
+                  <p className="text-xs opacity-90">Watch our premium Egyptian produce journey</p>
+                </div>
+              </div>
               <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-8 w-8 text-primary" />
