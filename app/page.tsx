@@ -134,8 +134,7 @@ Our products are carefully selected, handled, and packed to meet international e
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Products Section */}
       <section className="py-20 bg-background">
