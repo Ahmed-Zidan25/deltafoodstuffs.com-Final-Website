@@ -35,23 +35,19 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-<Link href="/" className="flex items-center space-x-2">
-  <div className="w-10 h-10 relative">
+<Link href="/" className="flex items-center">
+  <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16">
     <Image
-      src="/Logo-2.jpg" // Adjust path if needed
+      src="/Logo-2.jpg"
       alt="Delta Food Stuffs Logo"
       fill
       className="object-contain rounded-lg"
+      sizes="(max-width: 640px) 48px, (max-width: 768px) 56px, 64px"
+      priority
     />
   </div>
+  <span className="ml-3 text-lg font-semibold hidden sm:inline">Delta Food Stuffs</span>
 </Link>
-          {/* <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">E</span>
-            </div>
-            <span className="font-bold text-xl text-foreground">Delta Food Stuffs</span>
-          </Link> */}
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (

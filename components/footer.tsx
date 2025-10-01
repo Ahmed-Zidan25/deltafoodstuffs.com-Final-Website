@@ -7,20 +7,26 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
-<div className="space-y-4">
-  <div className="flex items-center space-x-2">
-    <div className="w-10 h-10 relative">
+<div className="space-y-6">
+  <div className="flex items-center space-x-4">
+    <div className="relative w-16 h-16 md:w-20 md:h-20">
       <Image
-        src="/Logo-2.jpg" // Make sure logo.png is in your /public folder
+        src="/Logo-2.jpg"
         alt="Delta Food Stuffs Logo"
         fill
         className="object-contain rounded-lg"
+        sizes="80px"
+        priority
       />
     </div>
+    <div>
+      <p className="text-lg font-semibold">Delta Food Stuffs</p>
+      <p className="text-sm text-muted-foreground">Reliable supply of premium frozen produce</p>
+    </div>
   </div>
-  <p className="text-muted-foreground text-sm leading-relaxed">
-    Premium Egyptian produce exported worldwide. Fresh vegetables, fruits, and citrus delivered with quality
-    and reliability.
+
+  <p className="text-muted-foreground text-sm leading-relaxed max-w-xl">
+    Premium Egyptian produce exported worldwide. Fresh vegetables, fruits, pickle, and citrus delivered with quality and reliability.
   </p>
 </div>
           {/* <div className="space-y-4">
