@@ -4,25 +4,24 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Globe, Truck, Shield, Star, Play } from "lucide-react"
 import SocialMedia from "@/components/social-media"
-import Image from "next/image";
 
 export default function HomePage() {
   const products = [
     {
-      title: "Fresh Products",
+      title: "Fresh Vegetables",
       description: "Premium carrots, onions, garlic and more",
       image: "/fresh-vegetables-carrots-onions-garlic.jpg",
-      href: "/products/fresh",
+      href: "/products/vegetables",
     },
     {
-      title: "Primium Pickle",
-      description: "Pickled Onion, Cucumber, Olives from Egypt",
+      title: "Tropical Fruits",
+      description: "Mangoes, guavas, pomegranates from Egypt",
       image: "/tropical-fruits-mango-guava-pomegranate.jpg",
-      href: "/products/pickle",
+      href: "/products/fruits",
     },
     {
-      title: "Frozen Collection",
-      description: "Frozen Mixed Vegetables, Peas, Strawberries year-round",
+      title: "Citrus Collection",
+      description: "Oranges, mandarines, lemons year-round",
       image: "/citrus-fruits-oranges-lemons-mandarines.jpg",
       href: "/products/frozen",
     },
@@ -66,7 +65,8 @@ export default function HomePage() {
                   Fresh From Egypt to the World
                 </h1>
                 <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
-                  Delta Food stuffs stands at the forefront of agricultural innovation, transforming nature's bounty into perfectly preserved frozen produce for global markets. Our commitment to quality begins in the heart of the rich Egyptian Delta, where ideal conditions yield exceptional fruits and vegetables. Utilizing advanced freezing technologies, we lock in freshness, taste, and vital nutrients, ensuring our products meet the exacting demands of our B2B clients. Choose Delta Foodstuffs for reliable supply, superior quality, and a partner dedicated to your success.
+                  Leading exporter of premium vegetables, fruits, and citrus. Delivering Egyptian agricultural
+                  excellence to international markets with uncompromising quality and reliability.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -94,16 +94,37 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-           <div className="relative rounded-2xl overflow-hidden bg-muted w-48 h-48">
-  <img
-    src="/egyptian-farm-fresh-vegetables-fruits.jpg"
-    alt="Fresh Egyptian produce ready for export"
-    fill
-    className="object-cover object-center"
-    sizes="(max-width: 640px) 192px, 384px"
-    priority
-  />
-</div>
+            <div className="relative">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-muted relative group">
+                <video
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  poster="/egyptian-farm-fresh-vegetables-fruits-export-quali.jpg"
+                >
+                  <source src="/egyptian-produce-cultivation-to-export.mp4" type="video/mp4" />
+                  <source src="/egyptian-produce-cultivation-to-export.webm" type="video/webm" />
+                  {/* Fallback image if video doesn't load */}
+                  <img
+                    src="/egyptian-farm-fresh-vegetables-fruits-export-quali.jpg"
+                    alt="Fresh Egyptian produce ready for export"
+                    className="w-full h-full object-cover"
+                  />
+                </video>
+                {/* Video overlay with play indicator */}
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="bg-primary/90 rounded-full p-3">
+                    <Play className="h-6 w-6 text-primary-foreground fill-current" />
+                  </div>
+                </div>
+                {/* Video description overlay */}
+                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-lg p-3 text-white">
+                  <p className="text-sm font-medium">From Farm to Export</p>
+                  <p className="text-xs opacity-90">Watch our premium Egyptian produce journey</p>
+                </div>
+              </div>
               <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-8 w-8 text-primary" />
@@ -117,7 +138,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      </div>
 
       {/* Products Section */}
       <section className="py-20 bg-background">
@@ -128,7 +148,7 @@ export default function HomePage() {
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">Premium Egyptian Produce</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              From the fertile lands of Egypt, we bring you the finest selection of vegetables, fruits, pickle, and citrus.
+              From the fertile lands of Egypt, we bring you the finest selection of vegetables, fruits, and citrus.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
