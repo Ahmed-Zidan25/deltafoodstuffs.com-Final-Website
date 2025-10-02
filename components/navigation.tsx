@@ -19,8 +19,7 @@ const Navigation = () => {
     { name: "Products", href: "/products"},
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Get Qoute", href: "/contact" },
-  ]
+     ]
 return (
   <nav className="bg-background border-b border-border sticky top-0 z-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +75,9 @@ return (
               </Button>
             ) : null}
 
-            <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">Get Quote</Button>
+            <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">
+            <Link href="/contact">Get Quote</Link>
+            </Button>
           </div>
         </div>
 
@@ -119,11 +120,7 @@ return (
                     </Link>
                   </Button>
                 )}
-                
-              <Button size="lg" variant="outline" asChild>
-                  <Link href="/contact">Get Quote</Link>
-                </Button> 
-                {/* <Button>Get Quote</Button> */}
+               <Button>Get Quote</Button>
               </div>
             </SheetContent>
           </Sheet>
