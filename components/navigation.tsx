@@ -21,87 +21,92 @@ const Navigation = () => {
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/contact" },
   ]
-
-  return (
+return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-<Link href="/" className="flex items-center">
-<div className="relative">
-  <Image
-        src="/logo-2.png"
-        alt="Delta Food Stuffs Logo"
-        fill
-        className="object-contain rounded-lg"
-        sizes="160px"
-        priority
-      />
-</div>
-  </Link>
-          {/* Desktop Navigation - flexible and responsive */}
-<div className="hidden md:flex items-center gap-6">
-  {/* nav items container: allows wrap or horizontal scroll */}
-  <nav className="flex flex-wrap gap-4 items-center max-w-[60%] min-w-0 overflow-x-auto">
-    {navItems.map((item) => (
-      <div key={item.name} className="min-w-0">
-        {item.submenu ? (
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                className="flex items-center space-x-1 whitespace-nowrap"
-              >
-                <span>{item.name}</span>
-                <ChevronDown className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {item.submenu.map((subItem) => (
-                <DropdownMenuItem key={subItem.name} asChild>
-                  <Link href={subItem.href} className="block w-full">
-                    {subItem.name}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        ) : (
-          <Link
-            href={item.href}
-            className="text-foreground hover:text-primary transition-colors duration-200 font-medium whitespace-nowrap"
-          >
-            {item.name}
+        <div className="flex items-center justify-between h-16 gap-4">
+          {/* Logo: parent is relative with explicit size so Image fill works */}
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg overflow-hidden">
+              <Image
+                src="/logo-2.png"         // change to "/logo.png" if needed
+                alt="Delta Food Stuffs Logo"
+                fill
+                className="object-contain"
+                sizes="(max-width:640px) 56px, (max-width:1024px) 80px, 96px"
+                priority
+              />
+            </div>
+            {/* <span className="ml-3 font-bold text-xl text-foreground whitespace-nowrap">
+              EgyptExport
+            </span> */}
           </Link>
-        )}
-      </div>
-    ))}
-  </nav>
 
-  {/* spacer to push actions to the right on wide screens */}
-  <div className="flex-1" />
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center w-full">
+            {/* nav wrapper: allows shrinking and horizontal scroll without wrapping */}
+            <nav className="flex items-center gap-4 min-w-0 overflow-x-auto scrollbar-thin">
+              {navItems.map((item) => (
+                <div key={item.name} className="min-w-0">
+                  {item.submenu ? (
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button
+                          variant="ghost"
+                          className="flex items-center space-x-1 whitespace-nowrap"
+                        >
+                          <span>{item.name}</span>
+                          <ChevronDown className="h-4 w-4" />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent>
+                        {item.submenu.map((subItem) => (
+                          <DropdownMenuItem key={subItem.name} asChild>
+                            <Link href={subItem.href} className="block w-full">
+                              {subItem.name}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))}
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-foreground hover:text-primary transition-colors duration-200 font-medium whitespace-nowrap"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </nav>
 
-  {/* actions container: will stay visible and not force nav overflow */}
-  <div className="flex items-center gap-3 shrink-0">
-    {authenticated && user?.role === "admin" && (
-      <Link
-        href="/admin"
-        className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1 whitespace-nowrap"
-      >
-        <Settings className="h-4 w-4" />
-        <span>Admin</span>
-      </Link>
-    )}
+            {/* spacer pushes actions to the right without squeezing nav items */}
+            <div className="flex-1" />
 
-    {!authenticated ? (
-      <Button variant="outline" asChild>
-        <Link href="/login">Login</Link>
-      </Button>
-    ) : null}
+            {/* actions */}
+            <div className="flex items-center gap-3 shrink-0">
+              {authenticated && user?.role === "admin" && (
+                <Link
+                  href="/admin"
+                  className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1 whitespace-nowrap"
+                >
+                  <Settings className="h-4 w-4" />
+                  <span>Admin</span>
+                </Link>
+              )}
 
-    <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">Get Quote</Button>
-  </div>
-</div>
+              {!authenticated ? (
+                <Button variant="outline" asChild>
+                  <Link href="/login">Login</Link>
+                </Button>
+              ) : null}
+
+              <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">
+                Get Quote
+              </Button>
+            </div>
+          </div>
 
           {/* Mobile Navigation */}
           <div className="md:hidden">
@@ -168,6 +173,7 @@ const Navigation = () => {
       </div>
     </nav>
   )
+ 
 }
 
 export default Navigation
