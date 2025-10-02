@@ -25,26 +25,8 @@ return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-4">
-          {/* Logo: parent is relative with explicit size so Image fill works */}
-          <Link href="/" className="flex items-center flex-shrink-0">
-            <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg overflow-hidden">
-              <Image
-                src="/logo-2.png"         // change to "/logo.png" if needed
-                alt="Delta Food Stuffs Logo"
-                fill
-                className="object-contain"
-                sizes="(max-width:640px) 56px, (max-width:1024px) 80px, 96px"
-                priority
-              />
-            </div>
-            {/* <span className="ml-3 font-bold text-xl text-foreground whitespace-nowrap">
-              EgyptExport
-            </span> */}
-          </Link>
-
-          {/* Desktop Navigation */}
+          {/* Left: Desktop Navigation (menu items aligned left) */}
           <div className="hidden md:flex items-center w-full">
-            {/* nav wrapper: allows shrinking and horizontal scroll without wrapping */}
             <nav className="flex items-center gap-4 min-w-0 overflow-x-auto scrollbar-thin">
               {navItems.map((item) => (
                 <div key={item.name} className="min-w-0">
@@ -71,7 +53,7 @@ return (
                     </DropdownMenu>
                   ) : (
                     <Link
-                      href={item.href}
+                      href={item.href ?? "#"}
                       className="text-foreground hover:text-primary transition-colors duration-200 font-medium whitespace-nowrap"
                     >
                       {item.name}
@@ -81,10 +63,8 @@ return (
               ))}
             </nav>
 
-            {/* spacer pushes actions to the right without squeezing nav items */}
             <div className="flex-1" />
 
-            {/* actions */}
             <div className="flex items-center gap-3 shrink-0">
               {authenticated && user?.role === "admin" && (
                 <Link
@@ -108,11 +88,30 @@ return (
             </div>
           </div>
 
-          {/* Mobile Navigation */}
-          <div className="md:hidden">
+          {/* Right: Logo */}
+          <div className="flex items-center flex-shrink-0 ml-4">
+            <Link href="/" className="flex items-center">
+              <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg overflow-hidden">
+                <Image
+                  src="/logo-2.png" // change to /logo.png if needed
+                  alt="Delta Food Stuffs Logo"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width:640px) 56px, (max-width:1024px) 80px, 96px"
+                  priority
+                />
+              </div>
+              <span className="ml-3 font-bold text-xl text-foreground whitespace-nowrap">
+                EgyptExport
+              </span>
+            </Link>
+          </div>
+
+          {/* Mobile menu button (keeps logo visible on mobile) */}
+          <div className="md:hidden absolute left-4">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
+                <Button variant="ghost" size="icon" aria-label="Open menu">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
@@ -122,7 +121,9 @@ return (
                     <div key={item.name}>
                       {item.submenu ? (
                         <div>
-                          <span className="font-medium text-foreground block py-2">{item.name}</span>
+                          <span className="font-medium text-foreground block py-2">
+                            {item.name}
+                          </span>
                           <div className="ml-4 space-y-2">
                             {item.submenu.map((subItem) => (
                               <Link
@@ -138,7 +139,7 @@ return (
                         </div>
                       ) : (
                         <Link
-                          href={item.href}
+                          href={item.href ?? "#"}
                           className="block py-2 text-foreground hover:text-primary transition-colors font-medium"
                           onClick={() => setIsOpen(false)}
                         >
