@@ -9,13 +9,13 @@ const Footer = () => {
           {/* Company Info */}
 <div className="space-y-6">
   <div className="flex items-center space-x-4">
-    <div className="relative w-16 h-16 md:w-20 md:h-20">
+    <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
       <Image
         src="/logo-2.png"
         alt="Delta Food Stuffs Logo"
         fill
         className="object-contain rounded-lg"
-        sizes="250px"
+        sizes="200px"
         priority
       />
     </div>

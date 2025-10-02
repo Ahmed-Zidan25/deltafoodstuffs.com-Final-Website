@@ -47,52 +47,69 @@ const Navigation = () => {
   />
 </div>
   </Link>
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <div key={item.name}>
-                {item.submenu ? (
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" className="flex items-center space-x-1">
-                        <span>{item.name}</span>
-                        <ChevronDown className="h-4 w-4" />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent>
-                      {item.submenu.map((subItem) => (
-                        <DropdownMenuItem key={subItem.name} asChild>
-                          <Link href={subItem.href}>{subItem.name}</Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                ) : (
-                  <Link
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
-            ))}
-            {authenticated && user?.role === "admin" && (
-              <Link
-                href="/admin"
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1"
+          {/* Desktop Navigation - flexible and responsive */}
+<div className="hidden md:flex items-center gap-6">
+  {/* nav items container: allows wrap or horizontal scroll */}
+  <nav className="flex flex-wrap gap-4 items-center max-w-[60%] min-w-0 overflow-x-auto">
+    {navItems.map((item) => (
+      <div key={item.name} className="min-w-0">
+        {item.submenu ? (
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="ghost"
+                className="flex items-center space-x-1 whitespace-nowrap"
               >
-                <Settings className="h-4 w-4" />
-                <span>Admin</span>
-              </Link>
-            )}
-            {!authenticated ? (
-              <Button variant="outline" asChild>
-                <Link href="/login">Login</Link>
+                <span>{item.name}</span>
+                <ChevronDown className="h-4 w-4" />
               </Button>
-            ) : null}
-            <Button className="bg-primary hover:bg-primary/90">Get Quote</Button>
-          </div>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {item.submenu.map((subItem) => (
+                <DropdownMenuItem key={subItem.name} asChild>
+                  <Link href={subItem.href} className="block w-full">
+                    {subItem.name}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        ) : (
+          <Link
+            href={item.href}
+            className="text-foreground hover:text-primary transition-colors duration-200 font-medium whitespace-nowrap"
+          >
+            {item.name}
+          </Link>
+        )}
+      </div>
+    ))}
+  </nav>
+
+  {/* spacer to push actions to the right on wide screens */}
+  <div className="flex-1" />
+
+  {/* actions container: will stay visible and not force nav overflow */}
+  <div className="flex items-center gap-3 shrink-0">
+    {authenticated && user?.role === "admin" && (
+      <Link
+        href="/admin"
+        className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1 whitespace-nowrap"
+      >
+        <Settings className="h-4 w-4" />
+        <span>Admin</span>
+      </Link>
+    )}
+
+    {!authenticated ? (
+      <Button variant="outline" asChild>
+        <Link href="/login">Login</Link>
+      </Button>
+    ) : null}
+
+    <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">Get Quote</Button>
+  </div>
+</div>
 
           {/* Mobile Navigation */}
           <div className="md:hidden">

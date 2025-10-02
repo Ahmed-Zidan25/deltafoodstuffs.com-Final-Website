@@ -2,24 +2,24 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { ArrowRight, Leaf, Apple, Snowflake } from "lucide-react"
+import { ArrowRight, Leaf, Jar, Snowflake } from "lucide-react"
 
-export default function picklePage() {
+export default function ProductsPage() {
   const categories = [
     {
-      title: "Fresh Products",
+      title: "Fresh",
       description: "Premium quality fresh vegetables,fruits including carrots, onions, garlic, and seasonal produce",
       icon: <Leaf className="h-8 w-8" />,
       image: "/vegetables-category-carrots-onions-garlic.jpg",
-      href: "/products/vegetables",
-      products: ["Carrots", "Onions", "Garlic", "Potatoes", "Tomatoes"],
+      href: "/products/fresh",
+      products: ["Mangoes", "Onions", "Garlic", "Pomegranates", "Mangoes", "Citrus Fruits"],
     },
     {
-      title: "Pickle Products",
+      title: "Pickle",
       description: "A Timeless Tradition, Reimagined for Modern Palates.",
-      icon: <Apple className="h-8 w-8" />,
-      image: "/fruits-category-mango-guava-pomegranate.jpg",
-      href: "/products/fruits",
+      icon: <Jar className="h-8 w-8" />,
+      image: "/mixed-pickle.png",
+      href: "/products/pickle",
       products: ["Pickled Onion", "Pickled Cucumber", "Pickled Olives", "Pickled Mixed Vegetables"],
     },
     {
@@ -28,7 +28,7 @@ export default function picklePage() {
       icon: <Snowflake className="h-8 w-8" />,
       image: "/frozen-products-vegetables-fruits.jpg",
       href: "/products/frozen",
-      products: ["Frozen Vegetables", "Frozen Fruits", "Mixed Blends", "IQF Products"],
+      products: ["Frozen Mixed Vegetables", "Mango", "Peas", "Strawberries", "Cauliflower", "Broccoli"],
     },
   ]
 
