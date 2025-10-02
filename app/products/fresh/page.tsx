@@ -7,14 +7,7 @@ import SocialShare from "@/components/social-share"
 
 export default function freshPage() {
   const vegetables = [
-    {
-      name: "Citrus Fruits",
-      description: "Sweet, seedless, and rich in juice. Available during the winter season",
-      image: "/citrus-fruits-oranges-lemons-mandarines.jpg",
-      season: "Year-round",
-      packaging: "10kg, 20kg cartons",
-      specifications: ["Grade A quality", "Size: 15-25cm", "Brix: 8-10%", "Shelf life: 3-4 weeks"],
-    },
+    
     {
       name: "Red Onions",
       description: "High-quality red onions with excellent storage life and flavor",
@@ -24,36 +17,60 @@ export default function freshPage() {
       specifications: ["Diameter: 5-8cm", "Dry matter: 12-15%", "Storage: 6-8 months", "Pungency: Medium"],
     },
     {
+      name: "Golden Onions",
+      description: "High-quality golden onions with excellent storage life and flavor and ideal for various culinary uses",
+      image: "/golden-onions-egyptian-export-quality.png",
+      season: "March - July",
+      packaging: "25kg mesh bags",
+      specifications: ["Diameter: 5-8cm", "Dry matter: 12-15%", "Storage: 6-8 months", "Pungency: Medium"],
+    },
+    {
       name: "Fresh Garlic",
-      description: "Aromatic white garlic with strong flavor and long shelf life",
+      description: "Premium Egyptian garlic with strong flavor and long shelf life.",
       image: "/fresh-garlic-white-egyptian-export.jpg",
       season: "May - August",
       packaging: "10kg, 20kg cartons",
       specifications: ["Size: 4.5-6.5cm", "White skin", "Storage: 8-10 months", "Moisture: <65%"],
     },
     {
-      name: "Cherry Tomatoes",
-      description: "Sweet cherry tomatoes perfect for fresh market and gourmet applications",
-      image: "/cherry-tomatoes-fresh-egyptian.jpg",
-      season: "October - May",
-      packaging: "5kg plastic crates",
-      specifications: ["Size: 15-25mm", "Brix: 6-8%", "Firm texture", "Vine-ripened"],
-    },
-    {
-      name: "Sweet Potatoes",
-      description: "Orange-fleshed sweet potatoes with excellent nutritional value",
-      image: "/sweet-potatoes-orange-egyptian.jpg",
-      season: "September - February",
-      packaging: "15kg cartons",
-      specifications: ["Size: 200-400g", "Orange flesh", "High beta-carotene", "Storage: 4-6 months"],
-    },
-    {
-      name: "Green Beans",
-      description: "Tender green beans ideal for fresh consumption and processing",
-      image: "/green-beans-fresh-egyptian-export.jpg",
+      name: "Navel Oranges",
+      description: "Sweet, seedless, and rich in juice. Available during the winter season",
+      image: "/horizontal-view-whole-cut-half-fresh-oranges-gray-background.jpg",
       season: "November - April",
-      packaging: "5kg cartons",
-      specifications: ["Length: 12-15cm", "Tender pods", "Bright green color", "Snap quality"],
+      packaging: "10kg, 20kg cartons",
+      specifications: ["Grade A quality", "Size: 15-25cm", "Brix: 8-10%", "Shelf life: 3-4 weeks"],
+    },
+    {
+      name: "Valencia Oranges",
+      description: "Perfect for juicing, with a balanced sweetness and long shelf life",
+      image: "/tasteful-oranges-wicker-basket-with-leaves.jpg",
+      season: "November - April",
+      packaging: "10kg, 20kg cartons",
+      specifications: ["Grade A quality", "Size: 15-25cm", "Brix: 8-10%", "Shelf life: 3-4 weeks"],
+    },
+    {
+      name: "Grapes",
+      description: "Export-quality white and red seedless grapes, hand-picked and packed to maintain their crispness and natural sweetness",
+      image: "/red-grapes-seedless-egyptian.jpg",
+      season: "April - June",
+      packaging: "4.5kg cartons",
+      specifications: ["Seedless variety", "Brix: 16-18%", "Firm texture", "Uniform clusters"],
+    },
+    {
+      name: "Pomegranates",
+      description: "Vibrant red skin and juicy arils packed with antioxidants. Harvested at peak ripeness for best flavor and shelf life. Varieties : Wonderful, Baladi, Early-116, Manfaluti",
+      image: "/pomegranates-red-egyptian-export.jpg",
+      season: "September - December",
+      packaging: "4kg, 5kg cartons",
+      specifications: ["Size: 250-450g", "Deep red color", "High antioxidants", "Storage: 2-3 months"],
+    },
+    {
+      name: "Mangoes",
+      description: "Fresh Egyptian mangoes, known for their rich flavor and aroma. Variety: Keitt, Kent, Tommy Atkins, Fagr Kelan, Zeehbia / Zebdia, Awees, Tymor, Sideeka, Mabrouka.",
+      image: "/egypt-mango.jpg",
+      season: "June - November",
+      packaging: "5-8kg cartons",
+      specifications: ["Size: 140-300g", "Juicy texture", "High beta-carotene", "Storage: 4-6 months"],
     },
   ]
 

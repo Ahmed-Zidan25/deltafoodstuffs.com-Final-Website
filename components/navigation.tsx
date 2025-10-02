@@ -17,15 +17,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    {
-      name: "Products",
-      href: "/products",
-      submenu: [
-        { name: "Fresh", href: "/products/fresh" },
-        { name: "Pickle", href: "/products/pickle" },
-        { name: "Frozen", href: "/products/frozen" },
-      ],
-    },
+    { name: "Products", href: "/products"},
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/contact" },
   ]
@@ -38,13 +30,13 @@ const Navigation = () => {
 <Link href="/" className="flex items-center">
 <div className="relative">
   <Image
-    src="/logo-2.png"
-    alt="Delta Food Stuffs Logo"
-    width={112}   // md size equivalent
-    height={112}
-    className="object-contain rounded-lg"
-    priority
-  />
+        src="/logo-2.png"
+        alt="Delta Food Stuffs Logo"
+        fill
+        className="object-contain rounded-lg"
+        sizes="230px"
+        priority
+      />
 </div>
   </Link>
           {/* Desktop Navigation - flexible and responsive */}
