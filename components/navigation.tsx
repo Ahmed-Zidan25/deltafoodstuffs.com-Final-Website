@@ -4,8 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, ChevronDown, Settings } from "lucide-react"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { Menu, Settings } from "lucide-react"
 import { isAuthenticated, getUser } from "@/lib/auth"
 import Image from "next/image";
 
@@ -37,7 +36,7 @@ return (
                 priority
               />
             </div>
-         
+          
           </Link>
 
           {/* Large flexible gap */}
