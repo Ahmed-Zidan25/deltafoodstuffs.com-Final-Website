@@ -138,10 +138,12 @@ return (
                       </Link>
                     </Button>
                   )}
-
-                  <Button className="bg-primary hover:bg-primary/90 mt-4">
+                <Button size="lg" variant="outline" asChild>
                   <Link href="/contact">Get Quote</Link>
-                  </Button>
+                </Button>
+                  {/* <Button className="bg-primary hover:bg-primary/90 mt-4">
+                  <Link href="/contact">Get Quote</Link>
+                  </Button> */}
                 </div>
               </SheetContent>
             </Sheet>
