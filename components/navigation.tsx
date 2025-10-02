@@ -21,8 +21,8 @@ const Navigation = () => {
       name: "Products",
       href: "/products",
       submenu: [
-        { name: "Vegetables", href: "/products/vegetables" },
-        { name: "Fruits", href: "/products/fruits" },
+        { name: "Fresh", href: "/products/fresh" },
+        { name: "Pickle", href: "/products/pickle" },
         { name: "Frozen", href: "/products/frozen" },
       ],
     },
@@ -36,17 +36,16 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
 <Link href="/" className="flex items-center">
-  <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16">
-    <Image
-      src="/logo-2.png"
-      alt="Delta Food Stuffs Logo"
-      fill
-      className="object-contain rounded-lg"
-      /* sizes="(max-width: 640px) 48px, (max-width: 768px) 56px, 64px" */
-      sizes="200px"
-      priority
-    />
-  </div>
+<div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
+  <Image
+    src="/logo-2.png"
+    alt="Delta Food Stuffs Logo"
+    fill
+    className="object-contain rounded-lg"
+    sizes="200px"
+    priority
+  />
+</div>
   </Link>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

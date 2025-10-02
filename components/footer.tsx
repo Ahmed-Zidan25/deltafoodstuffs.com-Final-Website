@@ -15,7 +15,7 @@ const Footer = () => {
         alt="Delta Food Stuffs Logo"
         fill
         className="object-contain rounded-lg"
-        sizes="180px"
+        sizes="250px"
         priority
       />
     </div>
@@ -71,18 +71,18 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/products/vegetables"
+                  href="/products/fresh"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  Vegetables
+                  Fresh
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/fruits"
+                  href="/products/pickle"
                   className="text-muted-foreground hover:text-primary transition-colors text-sm"
                 >
-                  Fruits
+                  Pickle
                 </Link>
               </li>
               <li>
