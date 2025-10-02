@@ -24,47 +24,41 @@ const Navigation = () => {
 return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-4">
-          {/* Left: Desktop Navigation (menu items aligned left) */}
-          <div className="hidden md:flex items-center w-full">
-            <nav className="flex items-center gap-4 min-w-0 overflow-x-auto scrollbar-thin">
+        <div className="flex items-center h-16 gap-4">
+          {/* Logo (left) */}
+          <Link href="/" className="flex items-center flex-shrink-0">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg overflow-hidden">
+              <Image
+                src="/logo.png"
+                alt="Logo"
+                fill
+                className="object-contain"
+                sizes="(max-width:640px) 76px, (max-width:1024px) 100px, 116px"
+                priority
+              />
+            </div>
+         
+          </Link>
+
+          {/* Large flexible gap */}
+          <div className="flex-grow" />
+
+          {/* Menu + actions (inline on desktop) */}
+          <div className="hidden md:flex items-center gap-6">
+            <nav className="flex items-center gap-6 min-w-0 overflow-x-auto">
               {navItems.map((item) => (
                 <div key={item.name} className="min-w-0">
-                  {item.submenu ? (
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="ghost"
-                          className="flex items-center space-x-1 whitespace-nowrap"
-                        >
-                          <span>{item.name}</span>
-                          <ChevronDown className="h-4 w-4" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent>
-                        {item.submenu.map((subItem) => (
-                          <DropdownMenuItem key={subItem.name} asChild>
-                            <Link href={subItem.href} className="block w-full">
-                              {subItem.name}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  ) : (
-                    <Link
-                      href={item.href ?? "#"}
-                      className="text-foreground hover:text-primary transition-colors duration-200 font-medium whitespace-nowrap"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
+                  <Link
+                    href={item.href ?? "#"}
+                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium whitespace-nowrap"
+                  >
+                    {item.name}
+                  </Link>
                 </div>
               ))}
             </nav>
 
-            <div className="flex-1" />
-
+            {/* action buttons */}
             <div className="flex items-center gap-3 shrink-0">
               {authenticated && user?.role === "admin" && (
                 <Link
@@ -82,33 +76,12 @@ return (
                 </Button>
               ) : null}
 
-              <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">
-                Get Quote
-              </Button>
+              <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">Get Quote</Button>
             </div>
           </div>
 
-          {/* Right: Logo */}
-          <div className="flex items-center flex-shrink-0 ml-4">
-            <Link href="/" className="flex items-center">
-              <div className="relative w-10 h-10 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg overflow-hidden">
-                <Image
-                  src="/logo-2.png" // change to /logo.png if needed
-                  alt="Delta Food Stuffs Logo"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width:640px) 56px, (max-width:1024px) 80px, 96px"
-                  priority
-                />
-              </div>
-              <span className="ml-3 font-bold text-xl text-foreground whitespace-nowrap">
-                EgyptExport
-              </span>
-            </Link>
-          </div>
-
-          {/* Mobile menu button (keeps logo visible on mobile) */}
-          <div className="md:hidden absolute left-4">
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-2">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" aria-label="Open menu">
@@ -118,36 +91,16 @@ return (
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <div className="flex flex-col space-y-4 mt-8">
                   {navItems.map((item) => (
-                    <div key={item.name}>
-                      {item.submenu ? (
-                        <div>
-                          <span className="font-medium text-foreground block py-2">
-                            {item.name}
-                          </span>
-                          <div className="ml-4 space-y-2">
-                            {item.submenu.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className="block py-2 text-muted-foreground hover:text-primary transition-colors"
-                                onClick={() => setIsOpen(false)}
-                              >
-                                {subItem.name}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ) : (
-                        <Link
-                          href={item.href ?? "#"}
-                          className="block py-2 text-foreground hover:text-primary transition-colors font-medium"
-                          onClick={() => setIsOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      )}
-                    </div>
+                    <Link
+                      key={item.name}
+                      href={item.href ?? "#"}
+                      className="block py-2 text-foreground hover:text-primary transition-colors font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
                   ))}
+
                   {authenticated && user?.role === "admin" && (
                     <Link
                       href="/admin"
@@ -158,6 +111,7 @@ return (
                       <span>Admin</span>
                     </Link>
                   )}
+
                   {!authenticated && (
                     <Button variant="outline" asChild>
                       <Link href="/login" onClick={() => setIsOpen(false)}>
@@ -165,6 +119,7 @@ return (
                       </Link>
                     </Button>
                   )}
+
                   <Button className="bg-primary hover:bg-primary/90 mt-4">Get Quote</Button>
                 </div>
               </SheetContent>
@@ -173,7 +128,7 @@ return (
         </div>
       </div>
     </nav>
-  )
+  
  
 }
 
