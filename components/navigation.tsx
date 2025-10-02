@@ -32,7 +32,7 @@ return (
                 alt="Logo"
                 fill
                 className="object-contain"
-                sizes="(max-width:640px) 120px, (max-width:1024px) 150px, 146px"
+                sizes="390px"
                 priority
               />
             </div>
