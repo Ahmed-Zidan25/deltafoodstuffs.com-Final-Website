@@ -28,7 +28,7 @@ return (
           <Link href="/" className="flex items-center flex-shrink-0">
             <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg overflow-hidden">
               <Image
-                src="/logo.png"
+                src="/logo-2.png"
                 alt="Logo"
                 fill
                 className="object-contain"
