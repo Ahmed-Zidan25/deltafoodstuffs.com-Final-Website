@@ -41,7 +41,7 @@ export default function FrozenPage() {
     {
       name: "Frozen Peas",
       description: "Sweetness and Nutrition, Straight from the Field. Discover the superior sweetness and vibrant green of Delta Foodstuffs' IQF frozen peas",
-      image: "/frozen-green-beans-iqf-quality.jpg",
+      image: "/frozen-green-beans-iqf-quality.png",
       temperature: "-18°C",
       packaging: "8kg, 10kg cartons",
       specifications: ["Grade A", "Bright green color", "Crisp texture"],

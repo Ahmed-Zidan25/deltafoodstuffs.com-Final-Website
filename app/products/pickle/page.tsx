@@ -17,7 +17,7 @@ export default function PicklePage() {
     {
       name: "Pickled Cucumber",
       description: "Classic Crunch, Unmistakable Freshness. Deliver the quintessential pickled flavor and satisfying crunch with Delta Foodstuffs' expertly crafted pickled cucumbers",
-      image: "/cucumber.png",
+      image: "/pickled-cucumber.png",
       season: "Year-round",
       packaging: "1.2kg Jars",
       specifications: ["Size: 6-9 cm", "Whole gherkins", "0.35-0.55% acetic acid", "Vinegar blend", "Shelf life: 24 months"],
@@ -25,7 +25,7 @@ export default function PicklePage() {
     {
       name: "Pickled Olives",
       description: "Mediterranean Essence, Rich in Flavor. Bring the sun-drenched flavors of the Mediterranean to your offerings with Delta Foodstuffs' premium pickled olives",
-      image: "/olive.png",
+      image: "/pickled-olive.png",
       season: "Year-round",
       packaging: "1.2kg Jars",
       specifications: ["Size: 80–100 per kg", "Brilliant color", "High antioxidants", "Shelf life: 24 months"],
@@ -33,7 +33,7 @@ export default function PicklePage() {
     {
       name: "Pickled Mixed Vegetables",
       description: "A Harmonious Blend of Tang and Crunch. Add a vibrant, flavorful dimension to your culinary creations with Delta Foodstuffs' exceptional pickled mixed vegetables",
-      image: "/mixed.png",
+      image: "/mixed-pickle.png",
       season: "Year-round",
       packaging: "1.2kg Jars",
       specifications: ["Medley of flavors and textures", "Tangy condiment", "carrots, onions, turnips, olives and other pickled veggies", "Shelf life: 24 months"],

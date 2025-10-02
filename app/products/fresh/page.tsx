@@ -43,7 +43,7 @@ export default function freshPage() {
     {
       name: "Valencia Oranges",
       description: "Perfect for juicing, with a balanced sweetness and long shelf life",
-      image: "/tasteful-oranges-wicker-basket-with-leaves.jpg",
+      image: "/valencia-orange.jpeg",
       season: "November - April",
       packaging: "10kg, 20kg cartons",
       specifications: ["Grade A quality", "Size: 15-25cm", "Brix: 8-10%", "Shelf life: 3-4 weeks"],

@@ -34,7 +34,7 @@ const Navigation = () => {
         alt="Delta Food Stuffs Logo"
         fill
         className="object-contain rounded-lg"
-        sizes="230px"
+        sizes="200px"
         priority
       />
 </div>
