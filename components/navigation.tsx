@@ -19,6 +19,7 @@ const Navigation = () => {
     { name: "Products", href: "/products"},
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/contact" },
+    { name: "Get Qoute", href: "/contact" },
   ]
 return (
   <nav className="bg-background border-b border-border sticky top-0 z-50">
