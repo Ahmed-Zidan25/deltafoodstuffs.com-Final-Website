@@ -4,15 +4,12 @@ import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, ChevronDown, Settings } from "lucide-react"
+import { Menu, ChevronDown } from "lucide-react"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { isAuthenticated, getUser } from "@/lib/auth"
 import Image from "next/image";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const authenticated = isAuthenticated()
-  const user = getUser()
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -27,81 +24,54 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-<Link href="/" className="flex items-center">
-<div className="relative">
-  <Image
-        src="/logo-2.png"
-        alt="Delta Food Stuffs Logo"
-        fill
-        className="object-contain rounded-lg"
-        sizes="160px"
+           <Link href={href} className={`flex items-center space-x-2 ${className}`}>
+      <div
+        className="rounded-lg flex items-center justify-center overflow-hidden bg-transparent flex-shrink-0"
+        style={{ width: px, height: px }}
+        aria-hidden="true">
+        <Image
+          src={/logo-2.png}
+          alt={Delta Food Stuffs Logo}
+         fill
+          className="object-contain"
+          sizes="200px"
         priority
-      />
-</div>
-  </Link>
-          {/* Desktop Navigation - flexible and responsive */}
-<div className="hidden md:flex items-center gap-6">
-  {/* nav items container: allows wrap or horizontal scroll */}
-  <nav className="flex flex-wrap gap-4 items-center max-w-[60%] min-w-0 overflow-x-auto">
-    {navItems.map((item) => (
-      <div key={item.name} className="min-w-0">
-        {item.submenu ? (
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                className="flex items-center space-x-1 whitespace-nowrap"
-              >
-                <span>{item.name}</span>
-                <ChevronDown className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {item.submenu.map((subItem) => (
-                <DropdownMenuItem key={subItem.name} asChild>
-                  <Link href={subItem.href} className="block w-full">
-                    {subItem.name}
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        ) : (
-          <Link
-            href={item.href}
-            className="text-foreground hover:text-primary transition-colors duration-200 font-medium whitespace-nowrap"
-          >
-            {item.name}
-          </Link>
-        )}
+        />
       </div>
-    ))}
-  </nav>
+    </Link>
 
-  {/* spacer to push actions to the right on wide screens */}
-  <div className="flex-1" />
-
-  {/* actions container: will stay visible and not force nav overflow */}
-  <div className="flex items-center gap-3 shrink-0">
-    {authenticated && user?.role === "admin" && (
-      <Link
-        href="/admin"
-        className="text-foreground hover:text-primary transition-colors duration-200 font-medium flex items-center space-x-1 whitespace-nowrap"
-      >
-        <Settings className="h-4 w-4" />
-        <span>Admin</span>
-      </Link>
-    )}
-
-    {!authenticated ? (
-      <Button variant="outline" asChild>
-        <Link href="/login">Login</Link>
-      </Button>
-    ) : null}
-
-    <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">Get Quote</Button>
-  </div>
-</div>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <div key={item.name}>
+                {item.submenu ? (
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" className="flex items-center space-x-1">
+                        <span>{item.name}</span>
+                        <ChevronDown className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent>
+                      {item.submenu.map((subItem) => (
+                        <DropdownMenuItem key={subItem.name} asChild>
+                          <Link href={subItem.href}>{subItem.name}</Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+            <Button className="bg-primary hover:bg-primary/90">Get Quote</Button>
+          </div>
 
           {/* Mobile Navigation */}
           <div className="md:hidden">
@@ -142,23 +112,6 @@ const Navigation = () => {
                       )}
                     </div>
                   ))}
-                  {authenticated && user?.role === "admin" && (
-                    <Link
-                      href="/admin"
-                      className="flex items-center space-x-2 py-2 text-foreground hover:text-primary transition-colors font-medium"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <Settings className="h-4 w-4" />
-                      <span>Admin</span>
-                    </Link>
-                  )}
-                  {!authenticated && (
-                    <Button variant="outline" asChild>
-                      <Link href="/login" onClick={() => setIsOpen(false)}>
-                        Login
-                      </Link>
-                    </Button>
-                  )}
                   <Button className="bg-primary hover:bg-primary/90 mt-4">Get Quote</Button>
                 </div>
               </SheetContent>
