@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { ArrowRight, Leaf, Jar, Snowflake } from "lucide-react"
+import { ArrowRight, Leaf, Salad, Snowflake } from "lucide-react"
 
 export default function ProductsPage() {
   const categories = [
@@ -17,7 +17,7 @@ export default function ProductsPage() {
     {
       title: "Pickle",
       description: "A Timeless Tradition, Reimagined for Modern Palates.",
-      icon: <Jar className="h-8 w-8" />,
+      icon: <Salad className="h-8 w-8" />,
       image: "/mixed-pickle.png",
       href: "/products/pickle",
       products: ["Pickled Onion", "Pickled Cucumber", "Pickled Olives", "Pickled Mixed Vegetables"],
