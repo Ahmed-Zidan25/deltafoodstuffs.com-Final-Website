@@ -17,13 +17,13 @@ export default function HomePage() {
     {
       title: "Premium Pickle",
       description: "A Timeless Tradition, Reimagined for Modern Palates ... year-round",
-      image: "/tropical-fruits-mango-guava-pomegranate.jpg",
+      image: "/mixed-pickle.png",
       href: "/products/pickle",
     },
     {
       title: "Frozen Produce",
       description: "Peas, Strawberries, Mango, Cauliflower ... year-round",
-      image: "/citrus-fruits-oranges-lemons-mandarines.jpg",
+      image: "/frozen-products-vegetables-fruits.jpg",
       href: "/products/frozen",
     },
   ]

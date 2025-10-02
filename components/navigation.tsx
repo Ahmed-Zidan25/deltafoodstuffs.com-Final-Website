@@ -36,13 +36,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
 <Link href="/" className="flex items-center">
-<div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
+<div className="relative">
   <Image
     src="/logo-2.png"
     alt="Delta Food Stuffs Logo"
-    fill
+    width={112}   // md size equivalent
+    height={112}
     className="object-contain rounded-lg"
-    sizes="200px"
     priority
   />
 </div>
