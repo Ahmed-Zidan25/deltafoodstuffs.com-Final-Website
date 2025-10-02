@@ -15,7 +15,7 @@ const Footer = () => {
         alt="Delta Food Stuffs Logo"
         fill
         className="object-contain rounded-lg"
-        sizes="125px"
+        sizes="180px"
         priority
       />
     </div>

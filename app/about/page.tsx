@@ -112,8 +112,9 @@ export default function AboutPage() {
         </div>
 
         {/* Mission, Vision, Values */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          <Card className="text-center border-border">
+        <div className="mb-20">
+          <div className="text-center space-y-4 mb-12">
+  <Card className="text-center border-border">
             <CardHeader>
               <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Target className="h-6 w-6 text-primary-foreground" />
@@ -171,6 +172,7 @@ export default function AboutPage() {
               </CardDescription>
             </CardContent>
           </Card>
+        </div>
         </div>
 
         {/* Core Values */}

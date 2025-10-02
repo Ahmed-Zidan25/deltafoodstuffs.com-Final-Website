@@ -43,7 +43,7 @@ const Navigation = () => {
       fill
       className="object-contain rounded-lg"
       /* sizes="(max-width: 640px) 48px, (max-width: 768px) 56px, 64px" */
-      sizes="135px"
+      sizes="200px"
       priority
     />
   </div>
