@@ -22,10 +22,30 @@ const Navigation = () => {
   ]
 return (
     <nav className="bg-background border-b border-border sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16 gap-4">
+      
           {/* Logo (left) */}
-          <Link href="/" className="flex items-center flex-shrink-0">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center h-auto md:h-20"> {/* remove fixed small h-16 if you want bigger logo */}
+      <Link href="/" className="flex items-center flex-shrink-0">
+        <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-lg overflow-hidden">
+          <Image
+            src="/logo-2.png"
+            alt="Logo"
+            fill
+            className="object-contain"
+            sizes="(max-width:640px) 150px, (max-width:1024px) 180px, 178px"
+            priority
+          />
+        </div>
+        {/* <span className="ml-3 font-bold text-xl text-foreground whitespace-nowrap">EgyptExport</span> */}
+      </Link>
+    </div>
+  </div>
+
+
+
+
+          {/* <Link href="/" className="flex items-center flex-shrink-0">
             <div className="relative w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg overflow-hidden">
               <Image
                 src="/logo-2.png"
@@ -37,7 +57,7 @@ return (
               />
             </div>
           
-          </Link>
+          </Link> */}
 
           {/* Large flexible gap */}
           <div className="flex-grow" />
@@ -119,7 +139,9 @@ return (
                     </Button>
                   )}
 
-                  <Button className="bg-primary hover:bg-primary/90 mt-4">Get Quote</Button>
+                  <Button className="bg-primary hover:bg-primary/90 mt-4">
+                  <Link href="/contact">Get Quote</Link>
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>
