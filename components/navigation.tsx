@@ -138,12 +138,9 @@ return (
                       </Link>
                     </Button>
                   )}
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="/contact">Get Quote</Link>
-                </Button>
-                  {/* <Button className="bg-primary hover:bg-primary/90 mt-4">
-                  <Link href="/contact">Get Quote</Link>
-                  </Button> */}
+                <Button variant="outline" asChild>
+                <Link href="/contact" onClick={() => setIsOpen(false)}>Get Quote</Link>
+                 </Button>
                 </div>
               </SheetContent>
             </Sheet>
