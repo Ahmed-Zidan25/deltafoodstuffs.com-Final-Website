@@ -10,7 +10,7 @@ export default function ProductsPage() {
       title: "Fresh",
       description: "Premium quality fresh vegetables,fruits including carrots, onions, garlic, and seasonal produce",
       icon: <Leaf className="h-8 w-8" />,
-      image: "/vegetables-category-carrots-onions-garlic.jpg",
+      image: "/grapes-carton.png",
       href: "/products/fresh",
       products: ["Mangoes", "Onions", "Garlic", "Pomegranates", "Mangoes", "Citrus Fruits"],
     },
