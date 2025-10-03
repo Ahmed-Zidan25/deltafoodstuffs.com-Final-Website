@@ -48,7 +48,7 @@ export default function ContactPage() {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Addresses",
-      details: ["ghada.leila@deltafoodstuffs.com", "marketing@deltafoodstuffs.com", "contact@deltafoodstuffs.com"],
+      details: ["Export@deltafoodstuffs.com", "Marketing@deltafoodstuffs.com", "Contact@deltafoodstuffs.com"],
     },
     {
       icon: <Clock className="h-6 w-6" />,

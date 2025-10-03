@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ZoomIn, Download, Share2 } from "lucide-react"
 
 export default function GalleryPage() {
-  const [selectedCategory, setSelectedCategory] = useState("all")
+  /* const [selectedCategory, setSelectedCategory] = useState("all") */
 
   const galleryImages = [
     {
@@ -169,7 +169,7 @@ export default function GalleryPage() {
      },
   ]
 
-  const categories = [
+ /*  const categories = [
     { id: "all", label: "All Images", count: galleryImages.length },
     {
       id: "fresh",
@@ -188,7 +188,7 @@ export default function GalleryPage() {
 
   const filteredImages =
     selectedCategory === "all" ? galleryImages : galleryImages.filter((img) => img.category === selectedCategory)
-
+ */
   return (
     <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

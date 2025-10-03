@@ -7,6 +7,14 @@ import { ArrowLeft, CheckCircle, Snowflake, Thermometer } from "lucide-react"
 export default function FrozenPage() {
   const frozenProducts = [
     {
+      name: " ",
+      description: " ",
+      image: "/WhatsApp Image 2025-10-03 at 16.22.12_63b9c210.jpg",
+      temperature: "-18°C",
+      packaging: "10kg, 20kg bags",
+      specifications: ["Free of any filaments or large seeds", "IQF technology", "Conical shape"],
+    },
+    {
       name: "IQF frozen Ocra",
       description: "The Essence of Egyptian Heritage, Perfectly Preserved. Experience the authentic flavor and tender texture of premium Egyptian okra, brought to you by Delta Foodstuffs",
       image: "/ocra.png",

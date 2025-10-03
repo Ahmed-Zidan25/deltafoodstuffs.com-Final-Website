@@ -26,7 +26,7 @@ export default function ProductsPage() {
       title: "Frozen Products",
       description: "Flash-frozen vegetables and fruits maintaining peak freshness and nutritional value",
       icon: <Snowflake className="h-8 w-8" />,
-      image: "/frozen-products-vegetables-fruits.jpg",
+      image: "/WhatsApp Image 2025-10-03 at 16.22.12_63b9c210.jpg",
       href: "/products/frozen",
       products: ["Frozen Mixed Vegetables", "Mango", "Peas", "Strawberries", "Cauliflower", "Broccoli"],
     },
