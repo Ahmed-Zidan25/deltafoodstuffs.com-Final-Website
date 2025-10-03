@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ZoomIn, Download, Share2 } from "lucide-react"
 
 export default function GalleryPage() {
-  /* const [selectedCategory, setSelectedCategory] = useState("all") */
+  const [selectedCategory, setSelectedCategory] = useState("all") 
 
   const galleryImages = [
     {
