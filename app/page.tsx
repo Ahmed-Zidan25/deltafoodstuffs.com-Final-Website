@@ -23,7 +23,7 @@ export default function HomePage() {
     {
       title: "Frozen Produce",
       description: "Peas, Strawberries, Mango, Cauliflower ... year-round",
-      image: "/frozen-products-vegetables-fruits.jpg",
+      image: "/WhatsApp Image 2025-10-03 at 16.22.12_63b9c210.jpg",
       href: "/products/frozen",
     },
   ]

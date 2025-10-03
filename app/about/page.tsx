@@ -104,7 +104,7 @@ export default function AboutPage() {
         <div className="mb-20">
           <div className="aspect-[21/9] rounded-2xl overflow-hidden bg-muted">
             <img
-              src="/about-egyptian-farm-workers-harvest-quality.jpg"
+              src="/egyptian-farm-fresh-vegetables-fruits.jpg"
               alt="Egyptian farm workers harvesting premium produce"
               className="w-full h-full object-cover"
             />
