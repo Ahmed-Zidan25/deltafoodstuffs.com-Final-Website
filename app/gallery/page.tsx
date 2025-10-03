@@ -35,7 +35,7 @@ export default function GalleryPage() {
 	 {
       id: 5,
       src: "/IMG-20250904-WA0057.jpg",
-      category: "facility",
+      category: "facilities",
      },
 	 {
       id: 6,
@@ -45,7 +45,7 @@ export default function GalleryPage() {
 	 {
       id: 7,
       src: "/IMG-20250904-WA0068.jpg",
-      category: "facility",
+      category: "facilities",
      },
 	 {
       id: 8,
@@ -55,7 +55,7 @@ export default function GalleryPage() {
 	 {
       id: 9,
       src: "/IMG-20250914-WA0027.jpg",
-      category: "facility",
+      category: "facilities",
      },
 	 {
       id: 10,
@@ -150,7 +150,7 @@ export default function GalleryPage() {
 	 {
       id: 28,
       src: "/IMG-20250915-WA0063.jpg",
-      category: "fresh",
+      category: "citrus",
      },
 	 {
       id: 29,
@@ -165,11 +165,11 @@ export default function GalleryPage() {
 	 {
       id: 31,
       src: "/IMG-20250914-WA0071.jpg",
-      category: "fresh",
+      category: "facilities",
      },
   ]
 
- /*  const categories = [
+   const categories = [
     { id: "all", label: "All Images", count: galleryImages.length },
     {
       id: "fresh",
@@ -188,7 +188,7 @@ export default function GalleryPage() {
 
   const filteredImages =
     selectedCategory === "all" ? galleryImages : galleryImages.filter((img) => img.category === selectedCategory)
- */
+
   return (
     <div className="min-h-screen py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

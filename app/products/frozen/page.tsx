@@ -7,12 +7,12 @@ import { ArrowLeft, CheckCircle, Snowflake, Thermometer } from "lucide-react"
 export default function FrozenPage() {
   const frozenProducts = [
     {
-      name: " ",
-      description: " ",
+      name: "Frozen potato frites",
+      description: "Bred from the sun-drenched soils of the Nile Delta, these frozen Egyptian potatoes capture a unique earthy flavor and a perfect texture, offering a taste of authentic Egyptian agriculture in a convenient, freezer-ready form",
       image: "/WhatsApp Image 2025-10-03 at 16.22.12_63b9c210.jpg",
       temperature: "-18°C",
-      packaging: "10kg, 20kg bags",
-      specifications: ["Free of any filaments or large seeds", "IQF technology", "Conical shape"],
+      packaging: "2.5 kg to 10 kg",
+      specifications: ["Standard Straight Cut", "High dry-matter", "IQF technology", "Crispy exterior and a soft, fluffy interior", "Shelf life: 18–24 months"],
     },
     {
       name: "IQF frozen Ocra",
