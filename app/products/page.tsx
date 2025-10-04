@@ -8,9 +8,9 @@ export default function ProductsPage() {
   const categories = [
     {
       title: "Fresh",
-      description: "Premium quality fresh vegetables,fruits including carrots, onions, garlic, and seasonal produce",
+      description: "Premium quality fresh vegetables, fruits including carrots, onions, garlic, and seasonal produce",
       icon: <Leaf className="h-8 w-8" />,
-      image: "/grapes-carton.png",
+      image: "/WhatsApp Image 2025-10-04 at 13.31.08_daabb1da.jpg",
       href: "/products/fresh",
       products: ["Mangoes", "Onions", "Garlic", "Pomegranates", "Mangoes", "Citrus Fruits"],
     },

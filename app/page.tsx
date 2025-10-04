@@ -11,7 +11,7 @@ export default function HomePage() {
     {
       title: "Fresh Products",
       description: "Premium Citrus, onions, garlic, Mangoes and more",
-      image: "/grapes-carton.png",
+      image: "/WhatsApp Image 2025-10-04 at 13.31.08_daabb1da.jpg",
       href: "/products/fresh",
     },
     {

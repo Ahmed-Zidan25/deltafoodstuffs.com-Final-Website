@@ -105,7 +105,7 @@ const Footer = () => {
               <br />
               +20 100 353 9052
               <br />
-              contact@deltafoodstuffs.com
+              Export@deltafoodstuffs.com
             </p>
           </div>
         </div>
