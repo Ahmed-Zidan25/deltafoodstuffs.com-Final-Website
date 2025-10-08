@@ -38,7 +38,7 @@ export default function ContactPage() {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Head Office",
-      details: ["100 Al Merghani, Al Golf, Nasr City, Cairo Governorate 4451426"],
+      details: ["100 Merghany st., Masr El Gedida, Cairo, Egypt"],
     },
     {
       icon: <Phone className="h-6 w-6" />,
@@ -267,17 +267,30 @@ export default function ContactPage() {
           <Card className="border-border">
             <CardHeader>
               <CardTitle className="text-card-foreground">Find Us</CardTitle>
-              <CardDescription>Our head office location in New Cairo, Egypt</CardDescription>
+              <CardDescription>Our head office location in Cairo, Egypt</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="aspect-[21/9] bg-muted rounded-lg flex items-center justify-center">
-                <div className="text-center space-y-2">
-                  <MapPin className="h-12 w-12 text-primary mx-auto" />
-                  <p className="text-muted-foreground">Interactive map would be integrated here</p>
-                  <p className="text-sm text-muted-foreground">100 Al Merghani, Al Golf, Nasr City, Cairo Governorate 4451426</p>
-                </div>
-              </div>
-            </CardContent>
+            {/* The interactive map is embedded here using an iframe. */}
+            <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-xl">
+              <iframe
+                // The source uses the specified address for accurate pinning
+                src="https://maps.google.com/maps?q=100%20Al%20Merghani,%20Al%20Golf,%20Nasr%20City,%20Cairo%20Governorate%204451426,%20Egypt&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Delta Foodstuffs Office Location"
+              ></iframe>
+            </div>
+            
+            {/* Displaying the physical address for clarity */}
+            <p className="text-sm text-gray-600 mt-4 flex items-center justify-center sm:justify-start">
+                <MapPin className="h-4 w-4 text-teal-600 mr-2" />
+                100 Merghany st., Masr El Gedida, Cairo, Egypt
+            </p>
+          </CardContent>
           </Card>
         </div> 
 
