@@ -38,7 +38,7 @@ export default function ContactPage() {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Head Office",
-      details: ["North 90th Street", "New Cairo, Egypt", "Postal Code: 11835"],
+      details: ["100 Al Merghani, Al Golf, Nasr City, Cairo Governorate 4451426"],
     },
     {
       icon: <Phone className="h-6 w-6" />,
@@ -263,7 +263,7 @@ export default function ContactPage() {
         </div> */}
 
         {/* Map Placeholder */}
-       {/*  <div className="mb-20">
+      <div className="mb-20">
           <Card className="border-border">
             <CardHeader>
               <CardTitle className="text-card-foreground">Find Us</CardTitle>
@@ -274,12 +274,12 @@ export default function ContactPage() {
                 <div className="text-center space-y-2">
                   <MapPin className="h-12 w-12 text-primary mx-auto" />
                   <p className="text-muted-foreground">Interactive map would be integrated here</p>
-                  <p className="text-sm text-muted-foreground">123 Export Street, New Cairo, Egypt</p>
+                  <p className="text-sm text-muted-foreground">100 Al Merghani, Al Golf, Nasr City, Cairo Governorate 4451426</p>
                 </div>
               </div>
             </CardContent>
           </Card>
-        </div> */}
+        </div> 
 
         {/* FAQ Section */}
         <div className="bg-muted rounded-2xl p-8">
