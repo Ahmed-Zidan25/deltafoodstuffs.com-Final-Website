@@ -278,7 +278,7 @@ export default function ContactPage() {
             <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-xl">
               <iframe
                 // The source uses the specified address for accurate pinning
-                src="https://goo.gl/maps/hjQGqYXW1rB87cvT9"
+                src="https://www.google.com/maps/dir/30.1173804,31.6625314/100+Al+Merghani,+Al+Golf,+Nasr+City,+Cairo+Governorate+4451426/@30.0983775,31.1721931,64207m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x14583e18cec2c3df:0xf82f39da4381401d!2m2!1d31.333184!2d30.0851542?entry=ttu&g_ep=EgoyMDI1MTAwNC4wIKXMDSoASAFQAw%3D%3D"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
