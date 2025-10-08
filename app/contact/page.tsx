@@ -266,7 +266,11 @@ export default function ContactPage() {
       <div className="mb-20">
           <Card className="border-border">
             <CardHeader>
-              <CardTitle className="text-card-foreground">Find Us</CardTitle>
+             <CardTitle className="text-gray-800 flex items-center space-x-2">
+              <MapPin className="h-5 w-5 text-red-600" />
+              <span>Find Us</span>
+            </CardTitle>
+  
               <CardDescription>Our head office location in Cairo, Egypt</CardDescription>
             </CardHeader>
             <CardContent>
@@ -274,7 +278,7 @@ export default function ContactPage() {
             <div className="aspect-[21/9] rounded-xl overflow-hidden shadow-xl">
               <iframe
                 // The source uses the specified address for accurate pinning
-                src="https://maps.google.com/maps?q=100%20Al%20Merghani,%20Al%20Golf,%20Nasr%20City,%20Cairo%20Governorate%204451426,%20Egypt&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://goo.gl/maps/hjQGqYXW1rB87cvT9"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
