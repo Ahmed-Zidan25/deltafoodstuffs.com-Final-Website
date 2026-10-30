@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Globe, Truck, Shield, Star, Play } from "lucide-react"
 import SocialMedia from "@/components/social-media"
-import HeroPromoCarousel from "@/components/hero-promo-carousel"
+import PromotionalBannerCarousel from "@/components/promotional-banner-carousel"
 
 export default function HomePage() {
   const products = [
@@ -59,6 +59,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      <PromotionalBannerCarousel />
       {/* Hero Section */}
        <section className="relative bg-gradient-to-br from-muted via-background to-muted py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,9 +103,15 @@ Our products are carefully selected, handled, and packed to meet international e
                 </div>
               </div>
             </div>
-            <div>
-              <HeroPromoCarousel />
-              <div className="mt-4 w-fit bg-card border border-border rounded-xl p-4 shadow-lg">
+            <div className="relative">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-muted">
+                <img
+                  src="/egyptian-farm-fresh-vegetables-fruits.jpg"
+                  alt="Fresh Egyptian produce ready for export"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-8 w-8 text-primary" />
                   <div>
