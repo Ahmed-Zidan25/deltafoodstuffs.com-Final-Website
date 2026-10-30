@@ -70,7 +70,7 @@ export default function PromotionalBannerCarousel() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Chat with us on WhatsApp about ${slide.alt}`}
-                className="relative block aspect-[1280/482] overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-primary"
+                className="relative block aspect-[1280/289] overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-primary"
               >
                 <Image
                   src={slide.src}
