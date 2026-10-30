@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { ArrowRight, Leaf, Salad, Snowflake } from "lucide-react"
+import { Apple, ArrowRight, Leaf, Salad, Snowflake } from "lucide-react"
 
 export default function ProductsPage() {
   const categories = [
@@ -30,6 +30,14 @@ export default function ProductsPage() {
       href: "/products/frozen",
       products: ["Frozen Mixed Vegetables", "Mango", "Peas", "Strawberries", "Cauliflower", "Broccoli"],
     },
+    {
+      title: "Dried & Freeze-Dried Fruits",
+      description: "A selection of dried and freeze-dried fruits and vegetables for snacks and food applications",
+      icon: <Apple className="h-8 w-8" />,
+      image: "/freeze-dried-mango.jpeg",
+      href: "/products/dried",
+      products: ["Figs", "Carrots", "Strawberries", "Bananas", "Mango", "Oranges", "Apples"],
+    },
   ]
 
   return (
@@ -42,13 +50,13 @@ export default function ProductsPage() {
           </Badge>
           <h1 className="text-4xl lg:text-5xl font-bold text-foreground text-balance">Premium Egyptian Produce</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
-            Discover our comprehensive range of fresh vegetables, fresh fruits, premium pickle, and frozen products. Each category
+            Discover our comprehensive range of fresh vegetables, fresh fruits, premium pickle, frozen, dried, and freeze-dried products. Each category
             represents the finest quality Egyptian agriculture has to offer.
           </p>
         </div>
 
         {/* Product Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category, index) => (
             <Card
               key={index}

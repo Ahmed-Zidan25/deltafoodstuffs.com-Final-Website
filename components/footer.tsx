@@ -93,6 +93,14 @@ const Footer = () => {
                   Frozen Products
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/products/dried"
+                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                >
+                  Dried &amp; Freeze-Dried Fruits
+                </Link>
+              </li>
             </ul>
           </div>
 

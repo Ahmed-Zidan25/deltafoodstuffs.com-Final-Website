@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, Globe, Truck, Shield, Star, Play } from "lucide-react"
 import SocialMedia from "@/components/social-media"
-import Image from "next/image";
+import HeroPromoCarousel from "@/components/hero-promo-carousel"
 
 export default function HomePage() {
   const products = [
@@ -25,6 +25,12 @@ export default function HomePage() {
       description: "Peas, Strawberries, Mango, Cauliflower ... year-round",
       image: "/WhatsApp Image 2025-10-03 at 16.22.12_63b9c210.jpg",
       href: "/products/frozen",
+    },
+    {
+      title: "Dried & Freeze-Dried Fruits",
+      description: "Figs, carrots, strawberries, bananas, mango, oranges, and apples",
+      image: "/freeze-dried-mango.jpeg",
+      href: "/products/dried",
     },
   ]
 
@@ -96,15 +102,9 @@ Our products are carefully selected, handled, and packed to meet international e
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted">
-                <img
-                  src="/egyptian-farm-fresh-vegetables-fruits.jpg"
-                  alt="Fresh Egyptian produce ready for export"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-4 shadow-lg">
+            <div>
+              <HeroPromoCarousel />
+              <div className="mt-4 w-fit bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-8 w-8 text-primary" />
                   <div>
@@ -130,7 +130,7 @@ Our products are carefully selected, handled, and packed to meet international e
               From the fertile lands of Egypt, we bring you the finest selection of vegetables, fruits, and citrus.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {products.map((product, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border">
                 <div className="aspect-[4/3] overflow-hidden rounded-t-lg">
