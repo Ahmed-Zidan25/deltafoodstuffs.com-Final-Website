@@ -18,6 +18,22 @@ const slides = [
     src: "/Banner_slider_1.jpeg",
     alt: "Delta Foodstuffs HoReCa supply promotional banner",
   },
+  {
+    src: "/banner-dried-fruits.png",
+    alt: "Dried fruits promotional banner",
+  },
+  {
+    src: "/banner-fresh-fruits.png",
+    alt: "Fresh fruits from Egypt promotional banner",
+  },
+  {
+    src: "/banner-frozen-fruits-vegetables.png",
+    alt: "Frozen fruits and vegetables promotional banner",
+  },
+  {
+    src: "/banner-pickles-preserved-products.png",
+    alt: "Pickles and preserved products promotional banner",
+  },
 ]
 
 const whatsappUrl = "https://wa.me/201003539052"
@@ -94,7 +110,7 @@ export default function PromotionalBannerCarousel() {
             download="Delta-Foodstuffs-Company-Profile.pdf"
           >
             <Download aria-hidden="true" />
-            Download Profile
+            Download Company Profile
           </a>
         </Button>
         {slides.length > 1 && (
