@@ -69,12 +69,6 @@ return (
               </Link>
             )}
 
-            {!authenticated ? (
-              <Button variant="outline" asChild>
-                <Link href="/login">Login</Link>
-              </Button>
-            ) : null}
-
             <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">
             <Link href="/contact">Get Quote</Link>
             </Button>
@@ -113,13 +107,6 @@ return (
                   </Link>
                 )}
 
-                {!authenticated && (
-                  <Button variant="outline" asChild>
-                    <Link href="/login" onClick={() => setIsOpen(false)}>
-                      Login
-                    </Link>
-                  </Button>
-                )}
                <Button>Get Quote</Button>
               </div>
             </SheetContent>
