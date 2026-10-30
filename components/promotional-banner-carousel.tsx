@@ -78,7 +78,7 @@ export default function PromotionalBannerCarousel() {
                   fill
                   sizes="100vw"
                   priority={slide.src === slides[0].src}
-                  className="object-cover"
+                  className="object-fill"
                 />
               </a>
             </CarouselItem>
